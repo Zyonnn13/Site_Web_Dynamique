@@ -88,11 +88,3 @@ defaultImage := "/static/img/products/default.webp"
 - Clic sur "Consulter" ne fonctionne pas: assure-toi que la route `/product/` est déclarée avant `/` dans `main.go`.
 - Upload refusé: seules les extensions `.png,.jpg,.jpeg,.webp,.avif,.gif` sont acceptées par le serveur.
 
-## Idées d’amélioration
-
-- Persistance en base de données
-- Validation plus poussée (format de prix, tailles)
-- Pagination/filtrage sur la liste
-- Espace admin avec suppression/édition
-- Téléversement d'image côté CDN et miniatures
-
