@@ -1,0 +1,61 @@
+{{define "add"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/style.css?v=2">
+    <title>Ajouter un produit</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo/1.png" alt="logo du site">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/add">Ajouter</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+    <h1 class="title">Ajouter un nouveau produit</h1>
+    <form action="/add/create" method="POST" enctype="multipart/form-data" class="add-form">
+            <label>Nom du produit<br>
+                <input type="text" name="name" required>
+            </label>
+
+            <label>Prix (ex: 149€)<br>
+                <input type="text" name="price" required>
+            </label>
+
+            <label>Prix réduit (laisser vide si aucune réduction)<br>
+                <input type="text" name="reduc">
+            </label>
+
+            <label>Description<br>
+                <textarea name="description" rows="5" required></textarea>
+            </label>
+
+            <label>Stock (nombre)<br>
+                <input type="number" name="stock" min="0" value="1" required>
+            </label>
+
+            <label>Tailles (ex: S | M | L)<br>
+                <input type="text" name="size" value="M">
+            </label>
+
+            <label>Image du produit (optionnel)
+                <input type="file" name="image" accept=".png,.jpg,.jpeg,.webp,.avif,.gif">
+            </label>
+            <p>Si aucune image n'est fournie ou si le fichier est invalide, une image par défaut sera utilisée automatiquement.</p>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-add-cart">Ajouter le produit</button>
+                <a href="/" class="btn">Annuler</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,49 @@
+{{define "product"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>{{.Name}} - Détails du produit</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo/1.png" alt="logo du site">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/add">Ajouter</a></li>
+        </ul>
+    </nav>
+    
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="{{.Image}}" alt="{{.Name}}" onerror="this.onerror=null;this.src='/static/img/products/00958058-veste-lazare-gris-moyen_5_1.avif'">
+        </div>
+        <div class="product-info">
+            <h1 class="product-title">{{.Name}}</h1>
+            <div class="product-sizes">
+                <p><strong>Tailles disponibles :</strong> {{.Size}}</p>
+            </div>
+            <div class="product-description">
+                <p>{{.Description}}</p>
+            </div>
+            <div class="product-price">
+                {{ if .ReducPrice }}
+                    <span class="price">{{.ReducPrice}}</span>
+                    <span class="reduced-price">{{.Price}}</span>
+                {{ else }}
+                    <span class="price">{{.Price}}</span>
+                {{ end }}
+            </div>
+            <div class="product-stock">
+                <p><strong>Stock :</strong> {{.Stock}} articles disponibles</p>
+            </div>
+            <button class="btn-add-cart">Ajouter au panier</button>
+        </div>
+    </div>
+</body>
+</html>
+{{end}}

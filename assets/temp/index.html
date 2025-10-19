@@ -1,0 +1,44 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Index</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo/1.png" alt="logo du site">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/home">Accueil</a></li>
+            <li><a href="/add">Ajouter</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="title">Nos Produits</h1>
+    <div class="listproduct">
+        {{range .}}
+        <div class="item">
+            <img src="{{.Image}}" alt="{{.Name}}" onerror="this.onerror=null;this.src='/static/img/products/00958058-veste-lazare-gris-moyen_5_1.avif'">
+            <div class="info">
+                <h2>{{.Name}}</h2>
+                <div class="price">
+                    {{ if .ReducPrice }}
+                        <span class="old-price">{{.Price}}</span>
+                        <span class="new-price">{{.ReducPrice}}</span>
+                    {{ else }}
+                        <span class="current-price">{{.Price}}</span>
+                    {{ end }}
+                </div>
+                <a href="/product/{{.ID}}" class="btn">Consulter</a>
+            </div>
+        </div>
+        {{end}}
+    </div>
+</body>
+
+</html>
+{{end}}
