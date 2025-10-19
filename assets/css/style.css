@@ -93,7 +93,7 @@ body{
     margin-bottom: 25px;
 }
 
-/* prix remisé dans la liste: nouveau prix en rouge, ancien barré */
+
 .listproduct .item .price .new-price{
     color: #d32f2f;
     font-weight: 700;
@@ -151,9 +151,7 @@ body{
     margin-left: 15px;
 }
 
-/* ==================== PAGE DE DÉTAILS DU PRODUIT ==================== */
 
-/* Conteneur principal de la page de détails */
 .product-detail {
     display: flex;
     gap: 50px;
@@ -162,7 +160,7 @@ body{
     margin: 0 auto;
 }
 
-/* Section de l'image du produit */
+
 .product-image {
     flex: 1;
     display: flex;
@@ -181,7 +179,7 @@ body{
     padding: 20px;
 }
 
-/* Section des informations du produit */
+
 .product-info {
     flex: 1;
     display: flex;
@@ -189,7 +187,6 @@ body{
     gap: 20px;
 }
 
-/* Titre du produit */
 .product-title {
     font-size: 32px;
     color: #333;
@@ -198,7 +195,7 @@ body{
     margin-bottom: 10px;
 }
 
-/* Tailles disponibles */
+
 .product-sizes {
     background-color: #f5f5f5;
     padding: 15px;
@@ -210,7 +207,7 @@ body{
     color: #555;
 }
 
-/* Description du produit */
+
 .product-description {
     line-height: 1.6;
 }
@@ -221,7 +218,6 @@ body{
     text-align: justify;
 }
 
-/* Prix du produit */
 .product-price {
     display: flex;
     align-items: center;
@@ -242,7 +238,7 @@ body{
     color: #999;
 }
 
-/* Stock disponible */
+
 .product-stock {
     background-color: #e8f5e9;
     padding: 12px;
@@ -255,7 +251,6 @@ body{
     color: #2e7d32;
 }
 
-/* Bouton Ajouter au panier */
 .btn-add-cart {
     background-color: #d32f2f;
     color: white;
@@ -277,7 +272,7 @@ body{
     box-shadow: 0 6px 12px rgba(211, 47, 47, 0.4);
 }
 
-/* Responsive pour tablettes et petits écrans */
+
 @media (max-width: 768px) {
     .product-detail {
         flex-direction: column;
@@ -293,7 +288,6 @@ body{
     }
 }
 
-/* Styles pour la page d'ajout */
 .container{
     max-width: 900px;
     margin: 40px auto;
@@ -365,6 +359,3 @@ body{
     background-color: #4a4a4a;
 }
 
-.add-form .btn:active{
-    transform: translateY(1px);
-}
